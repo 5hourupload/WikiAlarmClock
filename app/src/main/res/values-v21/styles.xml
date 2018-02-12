@@ -1,0 +1,16 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Dark</item>
+		<item name="actionOverflowButtonStyle">@style/OverFlow</item>
+    </style>
+
+
+	<style name="OverFlow" parent="@style/Widget.AppCompat.Light.ActionButton.Overflow">
+		<item name="android:tint">#000000</item>
+	</style>
+</resources>

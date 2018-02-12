@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="fhu.wikialarmclock"
+		  xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+	<uses-permission android:name="android.permission.VIBRATE"/>
+	<uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+
+	<application
+		android:allowBackup="true"
+		android:icon="@mipmap/ic_launcher"
+		android:label="@string/app_name"
+		android:supportsRtl="true"
+		android:theme="@style/AppTheme">
+		<activity
+			android:name="fhu.wikialarmclock.MainActivity"
+			android:label="@string/app_name"
+			android:theme="@style/AppTheme.NoActionBar">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity
+			android:name="fhu.wikialarmclock.alarmRingingInterface"
+			android:excludeFromRecents="true"
+			android:noHistory="true"
+			android:theme="@style/AppTheme.NoActionBar">
+		</activity>
+
+		<receiver android:name="fhu.wikialarmclock.offButton"/>
+		<receiver android:name="fhu.wikialarmclock.snoozeButton"/>
+		<receiver android:name="fhu.wikialarmclock.alarmReceiver">
+		</receiver>
+
+		<service android:name="fhu.wikialarmclock.RingtonePlayingService">
+			android:enabled="true"
+		</service>
+		<service android:name="fhu.wikialarmclock.loadArticle">
+			android:enabled="true"
+		</service>
+
+		<activity
+			android:name="fhu.wikialarmclock.SettingsActivity"
+			android:label="@string/title_activity_settings">
+		</activity>
+		<activity android:name="fhu.wikialarmclock.HistoryActivity">
+
+		</activity>
+	</application>
+
+
+</manifest>
