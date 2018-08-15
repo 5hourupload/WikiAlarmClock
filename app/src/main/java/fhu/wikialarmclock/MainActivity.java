@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity
 
         Intent loadArticle = new Intent(this, loadArticle.class);
         startService(loadArticle);
-        Set<String> test = mPrefs.getStringSet("wikipedia title", null);
+        Set<String> test = mPrefs.getStringSet("wikipedia title", new HashSet<String>());
         if (test.toString().equals("[]"))
         {
             Snackbar.make(this.findViewById(android.R.id.content), "Unable to connect to connect to internet.", Snackbar.LENGTH_LONG)
