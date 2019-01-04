@@ -6,8 +6,8 @@ android {
         applicationId "fhu.wikialarmclock"
         minSdkVersion 23
         targetSdkVersion 26
-        versionCode 3
-        versionName "1.002"
+        versionCode 4
+        versionName "1.003"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
